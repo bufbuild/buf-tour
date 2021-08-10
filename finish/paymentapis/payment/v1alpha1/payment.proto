@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package payment.v1alpha1;
+
+import "google/type/money.proto";
+
+// Order represents a monetary order.
+message Order {
+  string order_id = 1;
+  string recipient_id = 2;
+  google.type.Money amount = 3;
+  string payment_provider = 4;
+}

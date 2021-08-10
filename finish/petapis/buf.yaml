@@ -1,0 +1,11 @@
+version: v1
+name: buf.build/alice/petapis
+deps:
+  - buf.build/beta/googleapis
+  - buf.build/alice/paymentapis
+lint:
+  use:
+    - DEFAULT
+breaking:
+  use:
+    - FILE

@@ -4,7 +4,7 @@ managed:
   go_package_prefix:
     default: github.com/bufbuild/buf-tour/petstore/gen/proto/go
     except:
-      - buf.build/beta/googleapis
+      - buf.build/googleapis/googleapis
 plugins:
   - name: go
     out: gen/proto/go

@@ -2,16 +2,16 @@
 version: v1
 deps:
   - remote: buf.build
-    owner: alice
+    owner: acme
     repository: paymentapis
     branch: main
-    commit: dac7c0d731d74ee78aea6f5f812e6997
-    digest: b1-jrrTlZyx9gYfpWv9KoSkEJmzheEMQMvvaa4UtGOxzCo=
-    create_time: 2021-07-28T20:51:50.704528Z
+    commit: 2675d6a595ac4e0fb45cedc62edfc611
+    digest: b1-YeIuCGn0YrzxK1BZKOo3zCC5t0BloxMzg_m4XSN9Q_k=
+    create_time: 2021-08-12T18:05:38.055538Z
   - remote: buf.build
-    owner: beta
+    owner: googleapis
     repository: googleapis
     branch: main
-    commit: 1c473ad9220a49bca9320f4cc690eba5
-    digest: b1-unlhrcI3tnJd0JEGuOb692LZ_tY_gCGq6mK1bgCn1Pg=
-    create_time: 2021-06-23T20:16:47.788079Z
+    commit: 4c646e03d3f240c7adee783061d00ff6
+    digest: b1-KgltUGRRcmgG_U2MlDUMv3MmnTEdKdEJszcRTYSBj-k=
+    create_time: 2021-08-09T14:21:27.570209Z

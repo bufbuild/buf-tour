@@ -1,7 +1,7 @@
 version: v1
-name: buf.build/alice/paymentapis
+name: buf.build/acme/paymentapis
 deps:
-  - buf.build/beta/googleapis
+  - buf.build/googleapis/googleapis
 lint:
   use:
     - DEFAULT

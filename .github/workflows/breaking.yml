@@ -1,0 +1,18 @@
+name: buf
+on:
+  push:
+    paths:
+      - 'start/**'
+jobs:
+  breaking:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: bufbuild/buf-setup-action@v0.7.0
+        if: success()
+        with:
+          version: 1.0.0-rc11
+      - uses: bufbuild/buf-breaking-action@v1.0.0
+        if: success()
+        with:
+          against: 'https://github.com/kobim/buf-example-breaking.git#branch=main'

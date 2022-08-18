@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package pet.v1;
 
-import "payment/v1alpha1/payment.proto";
 import "google/type/datetime.proto";
+import "payment/v1alpha1/payment.proto";
 
 // PetType represents the different types of pets in the pet store.
 enum PetType {

@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package pet.v1;
 
-option go_package = "github.com/bufbuild/buf-tour/petstore/gen/proto/go/pet/v1;petv1";
-
 import "google/type/datetime.proto";
+
+option go_package = "github.com/bufbuild/buf-tour/petstore/gen/proto/go/pet/v1;petv1";
 
 // PetType represents the different types of pets in the pet store.
 enum PetType {

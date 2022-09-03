@@ -26,7 +26,7 @@ func run() error {
 	}
 
 	server := grpc.NewServer()
-	petv1.RegisterPetStoreServer(server, &petStoreServer{})
+	petv1.RegisterPetStoreServiceServer(server, &petStoreServiceServer{})
 	log.Println("Listening on", listenOn)
 	if err := server.Serve(listener); err != nil {
 		return fmt.Errorf("failed to serve gRPC server: %w", err)
@@ -35,13 +35,13 @@ func run() error {
 	return nil
 }
 
-// petStoreServer implements the PetStore API.
-type petStoreServer struct {
-	petv1.UnimplementedPetStoreServer
+// petStoreServiceServer implements the PetStoreService API.
+type petStoreServiceServer struct {
+	petv1.UnimplementedPetStoreServiceServer
 }
 
 // PutPet adds the pet associated with the given request into the PetStore.
-func (s *petStoreServer) PutPet(ctx context.Context, req *petv1.PutPetRequest) (*petv1.PutPetResponse, error) {
+func (s *petStoreServiceServer) PutPet(ctx context.Context, req *petv1.PutPetRequest) (*petv1.PutPetResponse, error) {
 	name := req.GetName()
 	petType := req.GetPetType()
 	log.Println("Got a request to create a", petType, "named", name)

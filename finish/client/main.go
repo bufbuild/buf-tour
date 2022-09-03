@@ -24,7 +24,7 @@ func run() error {
 	}
 	log.Println("Connected to", connectTo)
 
-	petStore := petv1.NewPetStoreServiceClient(conn)
+	petStore := petv1.NewPetStoreClient(conn)
 	if _, err := petStore.PutPet(context.Background(), &petv1.PutPetRequest{
 		PetType: petv1.PetType_PET_TYPE_SNAKE,
 		Name:    "Ekans",

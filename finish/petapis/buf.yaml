@@ -1,5 +1,5 @@
 version: v1
-name: bufbuild.internal/johnjohns/privatepetapis
+name: buf.build/acme/petapis
 deps:
   - buf.build/googleapis/googleapis
   - buf.build/acme/paymentapis

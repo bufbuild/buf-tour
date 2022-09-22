@@ -2,10 +2,9 @@ syntax = "proto3";
 
 package pet.v1;
 
-import "payment/v1alpha1/payment.proto";
-import "google/type/datetime.proto";
-
 option go_package = "github.com/bufbuild/buf-tour/petstore/gen/proto/go/pet/v1;petv1";
+
+import "google/type/datetime.proto";
 
 // PetType represents the different types of pets in the pet store.
 enum PetType {
@@ -42,21 +41,13 @@ message PutPetResponse {
 }
 
 message DeletePetRequest {
-  string pet_id = 1;
+  string petID = 1;
 }
 
 message DeletePetResponse {}
 
-message PurchasePetRequest {
-  string pet_id = 1;
-  payment.v1alpha1.Order order = 2;
-}
-
-message PurchasePetResponse {}
-
-service PetStoreService {
+service PetStore {
   rpc GetPet(GetPetRequest) returns (GetPetResponse) {}
   rpc PutPet(PutPetRequest) returns (PutPetResponse) {}
   rpc DeletePet(DeletePetRequest) returns (DeletePetResponse) {}
-  rpc PurchasePet(PurchasePetRequest) returns (PurchasePetResponse) {}
 }

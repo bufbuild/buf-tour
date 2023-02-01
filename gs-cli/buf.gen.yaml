@@ -1,0 +1,6 @@
+version: v1
+plugins:
+  - plugin: buf.build/protocolbuffers/cpp
+    out: gen
+  - plugin: buf.build/protocolbuffers/java
+    out: gen

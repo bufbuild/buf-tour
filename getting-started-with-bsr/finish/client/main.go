@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"buf.build/gen/go/<BUF_USER>/petapis/bufbuild/connect-go/pet/v1/petv1connect"
-	petv1 "buf.build/gen/go/<BUF_USER>/petapis/protocolbuffers/go/pet/v1"
+	"buf.build/gen/go/ejackson/petapis/bufbuild/connect-go/pet/v1/petv1connect"
+	petv1 "buf.build/gen/go/ejackson/petapis/protocolbuffers/go/pet/v1"
 	"github.com/bufbuild/connect-go"
 )
 

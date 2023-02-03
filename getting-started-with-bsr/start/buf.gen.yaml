@@ -2,14 +2,13 @@ version: v1
 managed:
   enabled: true
   go_package_prefix:
-    default: github.com/bufbuild/buf-tour/petstore/gen/proto/go
+    default: github.com/bufbuild/buf-tour/petstore/gen
+    except:
+      - buf.build/googleapis/googleapis
 plugins:
-  - plugin: buf.build/bufbuild/es
-    out: gen/js
-    opt: target=js
-  - plugin: buf.build/bufbuild/es
-    out: gen/ts
-    opt: target=ts
   - plugin: buf.build/protocolbuffers/go
-    out: gen/go
+    out: gen
+    opt: paths=source_relative
+  - plugin: buf.build/bufbuild/connect-go
+    out: gen
     opt: paths=source_relative

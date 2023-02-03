@@ -1,13 +1,14 @@
-package main 
+package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"net/http"
 
-    // comment about remote packages
-	"buf.build/gen/go/<BUF_USER>/petapis/bufbuild/connect-go/pet/v1/petv1connect"
-	petv1 "buf.build/gen/go/<BUF_USER>/petapis/protocolbuffers/go/pet/v1"
+	// comment about remote packages
+	petv1 "github.com/bufbuild/buf-tour/petstore/gen/pet/v1"
+	"github.com/bufbuild/buf-tour/petstore/gen/pet/v1/petv1connect"
 	"github.com/bufbuild/connect-go"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"

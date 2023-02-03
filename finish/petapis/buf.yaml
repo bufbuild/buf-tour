@@ -1,11 +1,9 @@
 version: v1
-name: buf.build/acme/petapis
-deps:
-  - buf.build/googleapis/googleapis
-  - buf.build/acme/paymentapis
-lint:
-  use:
-    - DEFAULT
 breaking:
   use:
     - FILE
+lint:
+  use:
+    - DEFAULT
+  ignore:
+    - google/type/datetime.proto

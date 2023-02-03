@@ -3,7 +3,6 @@ syntax = "proto3";
 package pet.v1;
 
 import "google/type/datetime.proto";
-import "payment/v1alpha1/payment.proto";
 
 // PetType represents the different types of pets in the pet store.
 enum PetType {
@@ -45,16 +44,8 @@ message DeletePetRequest {
 
 message DeletePetResponse {}
 
-message PurchasePetRequest {
-  string pet_id = 1;
-  payment.v1alpha1.Order order = 2;
-}
-
-message PurchasePetResponse {}
-
 service PetStoreService {
   rpc GetPet(GetPetRequest) returns (GetPetResponse) {}
   rpc PutPet(PutPetRequest) returns (PutPetResponse) {}
   rpc DeletePet(DeletePetRequest) returns (DeletePetResponse) {}
-  rpc PurchasePet(PurchasePetRequest) returns (PurchasePetResponse) {}
 }

@@ -6,7 +6,6 @@ import (
 	"log"
 	"net/http"
 
-	// comment about remote packages
 	petv1 "github.com/bufbuild/buf-tour/petstore/gen/pet/v1"
 	"github.com/bufbuild/buf-tour/petstore/gen/pet/v1/petv1connect"
 	"github.com/bufbuild/connect-go"

@@ -1,5 +1,5 @@
 version: v1
-name: buf.build/ejackson/petapis
+name: buf.build/$BUF_USER/petapis
 deps:
   - buf.build/googleapis/googleapis
 breaking:

@@ -2,6 +2,9 @@ syntax = "proto3";
 
 package pet.v1;
 
+import "google/type/latlng.proto";
+
+
 // PetType represents the different types of pets in the pet store.
 enum PetType {
   PET_TYPE_UNSPECIFIED = 0;

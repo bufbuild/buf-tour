@@ -4,6 +4,8 @@ package pet.v1;
 
 import "google/type/datetime.proto";
 
+option go_package = "github.com/bufbuild/buf-tour/petstore/gen/proto/go/pet/v1;petv1";
+
 // PetType represents the different types of pets in the pet store.
 enum PetType {
   PET_TYPE_UNSPECIFIED = 0;
@@ -39,7 +41,7 @@ message PutPetResponse {
 }
 
 message DeletePetRequest {
-  string pet_id = 1;
+  string petID = 1;
 }
 
 message DeletePetResponse {}

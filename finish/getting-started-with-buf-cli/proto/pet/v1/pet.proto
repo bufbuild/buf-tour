@@ -2,8 +2,7 @@ syntax = "proto3";
 
 package pet.v1;
 
-import "google/type/latlng.proto";
-
+import "google/type/datetime.proto";
 
 // PetType represents the different types of pets in the pet store.
 enum PetType {
@@ -19,6 +18,7 @@ message Pet {
   PetType pet_type = 1;
   string pet_id = 2;
   string name = 3;
+  google.type.DateTime created_at = 4;
 }
 
 message GetPetRequest {

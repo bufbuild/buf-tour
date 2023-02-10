@@ -7,7 +7,7 @@
 package petv1
 
 import (
-	_type "github.com/bufbuild/buf-tour/gen/google/type"
+	datetime "google.golang.org/genproto/googleapis/type/datetime"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -83,10 +83,10 @@ type Pet struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	PetType   PetType         `protobuf:"varint,1,opt,name=pet_type,json=petType,proto3,enum=pet.v1.PetType" json:"pet_type,omitempty"`
-	PetId     string          `protobuf:"bytes,2,opt,name=pet_id,json=petId,proto3" json:"pet_id,omitempty"`
-	Name      string          `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
-	CreatedAt *_type.DateTime `protobuf:"bytes,4,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
+	PetType   PetType            `protobuf:"varint,1,opt,name=pet_type,json=petType,proto3,enum=pet.v1.PetType" json:"pet_type,omitempty"`
+	PetId     string             `protobuf:"bytes,2,opt,name=pet_id,json=petId,proto3" json:"pet_id,omitempty"`
+	Name      string             `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
+	CreatedAt *datetime.DateTime `protobuf:"bytes,4,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
 }
 
 func (x *Pet) Reset() {
@@ -142,7 +142,7 @@ func (x *Pet) GetName() string {
 	return ""
 }
 
-func (x *Pet) GetCreatedAt() *_type.DateTime {
+func (x *Pet) GetCreatedAt() *datetime.DateTime {
 	if x != nil {
 		return x.CreatedAt
 	}
@@ -517,7 +517,7 @@ var file_pet_v1_pet_proto_goTypes = []interface{}{
 	(*PutPetResponse)(nil),    // 5: pet.v1.PutPetResponse
 	(*DeletePetRequest)(nil),  // 6: pet.v1.DeletePetRequest
 	(*DeletePetResponse)(nil), // 7: pet.v1.DeletePetResponse
-	(*_type.DateTime)(nil),    // 8: google.type.DateTime
+	(*datetime.DateTime)(nil), // 8: google.type.DateTime
 }
 var file_pet_v1_pet_proto_depIdxs = []int32{
 	0, // 0: pet.v1.Pet.pet_type:type_name -> pet.v1.PetType

@@ -39,6 +39,6 @@ func (s *petStoreServiceServer) PutPet(
 ) (*connect.Response[petv1.PutPetResponse], error) {
 	name := req.Msg.GetName()
 	petType := req.Msg.GetPetType()
-	log.Println("Got a request to create a", petType, "named", name)
+	log.Printf("Got a request to create a %v named %s", petType, name)
 	return connect.NewResponse(&petv1.PutPetResponse{}), nil
 }

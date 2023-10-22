@@ -5,10 +5,10 @@
 package petv1connect
 
 import (
+	v1 "Go_T_buffTutorial/gen/pet/v1"
 	connect "connectrpc.com/connect"
 	context "context"
 	errors "errors"
-	v1 "github.com/bufbuild/buf-tour/gen/pet/v1"
 	http "net/http"
 	strings "strings"
 )

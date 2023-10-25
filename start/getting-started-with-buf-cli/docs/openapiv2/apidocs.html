@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf8" />
+  <title>google/type/datetime.proto</title>
+  <!-- needed for adaptive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <script src="https://cdn.redoc.ly/redoc/v2.1.2/bundles/redoc.standalone.js"></script><style data-styled="true" data-styled-version="6.1.0">.eJbJyM{width:calc(100% - 40%);padding:0 40px;}/*!sc*/
+@media print,screen and (max-width: 75rem){.eJbJyM{width:100%;padding:40px 40px;}}/*!sc*/
+data-styled.g4[id="sc-hKFymg"]{content:"eJbJyM,"}/*!sc*/
+.jsZiFE{padding:40px 0;}/*!sc*/
+.jsZiFE:last-child{min-height:calc(100vh + 1px);}/*!sc*/
+.jsZiFE>.jsZiFE:last-child{min-height:initial;}/*!sc*/
+@media print,screen and (max-width: 75rem){.jsZiFE{padding:0;}}/*!sc*/
+data-styled.g5[id="sc-eCAqax"]{content:"jsZiFE,"}/*!sc*/
+.bnQqtS{display:flex;width:100%;padding:0;}/*!sc*/
+@media print,screen and (max-width: 75rem){.bnQqtS{flex-direction:column;}}/*!sc*/
+data-styled.g8[id="sc-iCoHzw"]{content:"bnQqtS,"}/*!sc*/
+.kmfzzz{font-family:Montserrat,sans-serif;font-weight:400;font-size:1.85714em;line-height:1.6em;color:#333333;}/*!sc*/
+data-styled.g9[id="sc-fujznN"]{content:"kmfzzz,"}/*!sc*/
+.gJcGEt code[class*='language-'],.gJcGEt pre[class*='language-']{text-shadow:0 -0.1em 0.2em black;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;}/*!sc*/
+@media print{.gJcGEt code[class*='language-'],.gJcGEt pre[class*='language-']{text-shadow:none;}}/*!sc*/
+.gJcGEt pre[class*='language-']{padding:1em;margin:0.5em 0;overflow:auto;}/*!sc*/
+.gJcGEt .token.comment,.gJcGEt .token.prolog,.gJcGEt .token.doctype,.gJcGEt .token.cdata{color:hsl(30, 20%, 50%);}/*!sc*/
+.gJcGEt .token.punctuation{opacity:0.7;}/*!sc*/
+.gJcGEt .namespace{opacity:0.7;}/*!sc*/
+.gJcGEt .token.property,.gJcGEt .token.tag,.gJcGEt .token.number,.gJcGEt .token.constant,.gJcGEt .token.symbol{color:#4a8bb3;}/*!sc*/
+.gJcGEt .token.boolean{color:#e64441;}/*!sc*/
+.gJcGEt .token.selector,.gJcGEt .token.attr-name,.gJcGEt .token.string,.gJcGEt .token.char,.gJcGEt .token.builtin,.gJcGEt .token.inserted{color:#a0fbaa;}/*!sc*/
+.gJcGEt .token.selector+a,.gJcGEt .token.attr-name+a,.gJcGEt .token.string+a,.gJcGEt .token.char+a,.gJcGEt .token.builtin+a,.gJcGEt .token.inserted+a,.gJcGEt .token.selector+a:visited,.gJcGEt .token.attr-name+a:visited,.gJcGEt .token.string+a:visited,.gJcGEt .token.char+a:visited,.gJcGEt .token.builtin+a:visited,.gJcGEt .token.inserted+a:visited{color:#4ed2ba;text-decoration:underline;}/*!sc*/
+.gJcGEt .token.property.string{color:white;}/*!sc*/
+.gJcGEt .token.operator,.gJcGEt .token.entity,.gJcGEt .token.url,.gJcGEt .token.variable{color:hsl(40, 90%, 60%);}/*!sc*/
+.gJcGEt .token.atrule,.gJcGEt .token.attr-value,.gJcGEt .token.keyword{color:hsl(350, 40%, 70%);}/*!sc*/
+.gJcGEt .token.regex,.gJcGEt .token.important{color:#e90;}/*!sc*/
+.gJcGEt .token.important,.gJcGEt .token.bold{font-weight:bold;}/*!sc*/
+.gJcGEt .token.italic{font-style:italic;}/*!sc*/
+.gJcGEt .token.entity{cursor:help;}/*!sc*/
+.gJcGEt .token.deleted{color:red;}/*!sc*/
+data-styled.g32[id="sc-iJCSeZ"]{content:"gJcGEt,"}/*!sc*/
+.kzsNSq{position:relative;}/*!sc*/
+data-styled.g37[id="sc-kLokBR"]{content:"kzsNSq,"}/*!sc*/
+.nfpVm{font-family:Roboto,sans-serif;font-weight:400;line-height:1.5em;}/*!sc*/
+.nfpVm p:last-child{margin-bottom:0;}/*!sc*/
+.nfpVm h1{font-family:Montserrat,sans-serif;font-weight:400;font-size:1.85714em;line-height:1.6em;color:#32329f;margin-top:0;}/*!sc*/
+.nfpVm h2{font-family:Montserrat,sans-serif;font-weight:400;font-size:1.57143em;line-height:1.6em;color:#333333;}/*!sc*/
+.nfpVm code{color:#e53935;background-color:rgba(38, 50, 56, 0.05);font-family:Courier,monospace;border-radius:2px;border:1px solid rgba(38, 50, 56, 0.1);padding:0 5px;font-size:13px;font-weight:400;word-break:break-word;}/*!sc*/
+.nfpVm pre{font-family:Courier,monospace;white-space:pre;background-color:#11171a;color:white;padding:20px;overflow-x:auto;line-height:normal;border-radius:0;border:1px solid rgba(38, 50, 56, 0.1);}/*!sc*/
+.nfpVm pre code{background-color:transparent;color:white;padding:0;}/*!sc*/
+.nfpVm pre code:before,.nfpVm pre code:after{content:none;}/*!sc*/
+.nfpVm blockquote{margin:0;margin-bottom:1em;padding:0 15px;color:#777;border-left:4px solid #ddd;}/*!sc*/
+.nfpVm img{max-width:100%;box-sizing:content-box;}/*!sc*/
+.nfpVm ul,.nfpVm ol{padding-left:2em;margin:0;margin-bottom:1em;}/*!sc*/
+.nfpVm ul ul,.nfpVm ol ul,.nfpVm ul ol,.nfpVm ol ol{margin-bottom:0;margin-top:0;}/*!sc*/
+.nfpVm table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all;border-collapse:collapse;border-spacing:0;margin-top:1.5em;margin-bottom:1.5em;}/*!sc*/
+.nfpVm table tr{background-color:#fff;border-top:1px solid #ccc;}/*!sc*/
+.nfpVm table tr:nth-child(2n){background-color:#fafafa;}/*!sc*/
+.nfpVm table th,.nfpVm table td{padding:6px 13px;border:1px solid #ddd;}/*!sc*/
+.nfpVm table th{text-align:left;font-weight:bold;}/*!sc*/
+.nfpVm .share-link{cursor:pointer;margin-left:-20px;padding:0;line-height:1;width:20px;display:inline-block;outline:0;}/*!sc*/
+.nfpVm .share-link:before{content:'';width:15px;height:15px;background-size:contain;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjMDEwMTAxIiBkPSJNNDU5LjcgMjMzLjRsLTkwLjUgOTAuNWMtNTAgNTAtMTMxIDUwLTE4MSAwIC03LjktNy44LTE0LTE2LjctMTkuNC0yNS44bDQyLjEtNDIuMWMyLTIgNC41LTMuMiA2LjgtNC41IDIuOSA5LjkgOCAxOS4zIDE1LjggMjcuMiAyNSAyNSA2NS42IDI0LjkgOTAuNSAwbDkwLjUtOTAuNWMyNS0yNSAyNS02NS42IDAtOTAuNSAtMjQuOS0yNS02NS41LTI1LTkwLjUgMGwtMzIuMiAzMi4yYy0yNi4xLTEwLjItNTQuMi0xMi45LTgxLjYtOC45bDY4LjYtNjguNmM1MC01MCAxMzEtNTAgMTgxIDBDNTA5LjYgMTAyLjMgNTA5LjYgMTgzLjQgNDU5LjcgMjMzLjR6TTIyMC4zIDM4Mi4ybC0zMi4yIDMyLjJjLTI1IDI0LjktNjUuNiAyNC45LTkwLjUgMCAtMjUtMjUtMjUtNjUuNiAwLTkwLjVsOTAuNS05MC41YzI1LTI1IDY1LjUtMjUgOTAuNSAwIDcuOCA3LjggMTIuOSAxNy4yIDE1LjggMjcuMSAyLjQtMS40IDQuOC0yLjUgNi44LTQuNWw0Mi4xLTQyYy01LjQtOS4yLTExLjYtMTgtMTkuNC0yNS44IC01MC01MC0xMzEtNTAtMTgxIDBsLTkwLjUgOTAuNWMtNTAgNTAtNTAgMTMxIDAgMTgxIDUwIDUwIDEzMSA1MCAxODEgMGw2OC42LTY4LjZDMjc0LjYgMzk1LjEgMjQ2LjQgMzkyLjMgMjIwLjMgMzgyLjJ6Ii8+PC9zdmc+Cg==');opacity:0.5;visibility:hidden;display:inline-block;vertical-align:middle;}/*!sc*/
+.nfpVm h1:hover>.share-link::before,.nfpVm h2:hover>.share-link::before,.nfpVm .share-link:hover::before{visibility:visible;}/*!sc*/
+.nfpVm a{text-decoration:auto;color:#32329f;}/*!sc*/
+.nfpVm a:visited{color:#32329f;}/*!sc*/
+.nfpVm a:hover{color:#6868cf;text-decoration:auto;}/*!sc*/
+data-styled.g42[id="sc-cBornZ"]{content:"nfpVm,"}/*!sc*/
+.htfiSS{margin-top:0;margin-bottom:0.5em;}/*!sc*/
+data-styled.g91[id="sc-eGJXzN"]{content:"htfiSS,"}/*!sc*/
+.bBwtzC{border:1px solid #32329f;color:#32329f;font-weight:normal;margin-left:0.5em;padding:4px 8px 4px;display:inline-block;text-decoration:none;cursor:pointer;}/*!sc*/
+data-styled.g92[id="sc-csTbTw"]{content:"bBwtzC,"}/*!sc*/
+.hIIBnc{margin:0;padding:0;}/*!sc*/
+.hIIBnc:first-child{padding-bottom:32px;}/*!sc*/
+.sc-WZZhM .sc-WZZhM{font-size:0.929em;}/*!sc*/
+data-styled.g100[id="sc-WZZhM"]{content:"hIIBnc,"}/*!sc*/
+.idNPrd{font-size:0.8em;margin-top:10px;text-align:center;position:fixed;width:260px;bottom:0;background:#fafafa;}/*!sc*/
+.idNPrd a,.idNPrd a:visited,.idNPrd a:hover{color:#333333!important;padding:5px 0;border-top:1px solid #e1e1e1;text-decoration:none;display:flex;align-items:center;justify-content:center;}/*!sc*/
+.idNPrd img{width:15px;margin-right:5px;}/*!sc*/
+@media screen and (max-width: 50rem){.idNPrd{width:100%;}}/*!sc*/
+data-styled.g104[id="sc-eHEEaq"]{content:"idNPrd,"}/*!sc*/
+.keoWQR{user-select:none;width:20px;height:20px;align-self:center;display:flex;flex-direction:column;color:#32329f;}/*!sc*/
+data-styled.g129[id="sc-iGkpzv"]{content:"keoWQR,"}/*!sc*/
+.gFuFKv{width:260px;background-color:#fafafa;overflow:hidden;display:flex;flex-direction:column;backface-visibility:hidden;height:100vh;position:sticky;position:-webkit-sticky;top:0;}/*!sc*/
+@media screen and (max-width: 50rem){.gFuFKv{position:fixed;z-index:20;width:100%;background:#fafafa;display:none;}}/*!sc*/
+@media print{.gFuFKv{display:none;}}/*!sc*/
+data-styled.g130[id="sc-irKCZC"]{content:"gFuFKv,"}/*!sc*/
+.irmhJN{outline:none;user-select:none;background-color:#f2f2f2;color:#32329f;display:none;cursor:pointer;position:fixed;right:20px;z-index:100;border-radius:50%;box-shadow:0 0 20px rgba(0, 0, 0, 0.3);bottom:44px;width:60px;height:60px;padding:0 20px;}/*!sc*/
+@media screen and (max-width: 50rem){.irmhJN{display:flex;}}/*!sc*/
+.irmhJN svg{color:#0065FB;}/*!sc*/
+@media print{.irmhJN{display:none;}}/*!sc*/
+data-styled.g131[id="sc-eWnSBu"]{content:"irmhJN,"}/*!sc*/
+.gySYgS{font-family:Roboto,sans-serif;font-size:14px;font-weight:400;line-height:1.5em;color:#333333;display:flex;position:relative;text-align:left;-webkit-font-smoothing:antialiased;font-smoothing:antialiased;text-rendering:optimizeSpeed!important;tap-highlight-color:rgba(0, 0, 0, 0);text-size-adjust:100%;}/*!sc*/
+.gySYgS *{box-sizing:border-box;-webkit-tap-highlight-color:rgba(255, 255, 255, 0);}/*!sc*/
+data-styled.g132[id="sc-kTCrLD"]{content:"gySYgS,"}/*!sc*/
+.RUZpZ{z-index:1;position:relative;overflow:hidden;width:calc(100% - 260px);contain:layout;}/*!sc*/
+@media print,screen and (max-width: 50rem){.RUZpZ{width:100%;}}/*!sc*/
+data-styled.g133[id="sc-dvUzbo"]{content:"RUZpZ,"}/*!sc*/
+.jdTgwv{background:#263238;position:absolute;top:0;bottom:0;right:0;width:calc((100% - 260px) * 0.4);}/*!sc*/
+@media print,screen and (max-width: 75rem){.jdTgwv{display:none;}}/*!sc*/
+data-styled.g134[id="sc-jtiYlx"]{content:"jdTgwv,"}/*!sc*/
+.gllfWA{padding:5px 0;}/*!sc*/
+data-styled.g135[id="sc-elleSK"]{content:"gllfWA,"}/*!sc*/
+.dYqaiq{width:calc(100% - 40px);box-sizing:border-box;margin:0 20px;padding:5px 10px 5px 20px;border:0;border-bottom:1px solid #e1e1e1;font-family:Roboto,sans-serif;font-weight:bold;font-size:13px;color:#333333;background-color:transparent;outline:none;}/*!sc*/
+data-styled.g136[id="sc-kizEcT"]{content:"dYqaiq,"}/*!sc*/
+.iSBlAp{position:absolute;left:20px;height:1.8em;width:0.9em;}/*!sc*/
+.iSBlAp path{fill:#333333;}/*!sc*/
+data-styled.g137[id="sc-cKRLsE"]{content:"iSBlAp,"}/*!sc*/
+</style>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet">
+</head>
+
+<body>
+  
+      <div id="redoc"><div class="sc-kTCrLD gySYgS redoc-wrap"><div class="sc-irKCZC gFuFKv menu-content" style="top:0px;height:calc(100vh - 0px)"><div role="search" class="sc-elleSK gllfWA"><svg class="sc-cKRLsE iSBlAp search-icon" version="1.1" viewBox="0 0 1000 1000" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px"><path d="M968.2,849.4L667.3,549c83.9-136.5,66.7-317.4-51.7-435.6C477.1-25,252.5-25,113.9,113.4c-138.5,138.3-138.5,362.6,0,501C219.2,730.1,413.2,743,547.6,666.5l301.9,301.4c43.6,43.6,76.9,14.9,104.2-12.4C981,928.3,1011.8,893,968.2,849.4z M524.5,522c-88.9,88.7-233,88.7-321.8,0c-88.9-88.7-88.9-232.6,0-321.3c88.9-88.7,233-88.7,321.8,0C613.4,289.4,613.4,433.3,524.5,522z"></path></svg><input placeholder="Search..." aria-label="Search" type="text" class="sc-kizEcT dYqaiq search-input" value=""/></div><div class="sc-kLokBR kzsNSq scrollbar-container undefined"><ul role="menu" class="sc-WZZhM hIIBnc"></ul><div class="sc-eHEEaq idNPrd"><a target="_blank" rel="noopener noreferrer" href="https://redocly.com/redoc/">API docs by Redocly</a></div></div></div><div class="sc-eWnSBu irmhJN"><div class="sc-iGkpzv keoWQR"><svg class="" style="transform:translate(2px, -4px) rotate(180deg);transition:transform 0.2s ease" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="15" height="15"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg><svg class="" style="transform:translate(2px, 4px);transition:transform 0.2s ease" viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="15" height="15"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg></div></div><div class="sc-dvUzbo RUZpZ api-content"><div class="sc-eCAqax jsZiFE"><div class="sc-iCoHzw bnQqtS"><div class="sc-hKFymg eJbJyM api-info"><h1 class="sc-fujznN sc-eGJXzN kmfzzz htfiSS">google/type/datetime.proto<!-- --> <span>(<!-- -->version not set<!-- -->)</span></h1><p>Download OpenAPI specification<!-- -->:<a download="openapi.json" target="_blank" class="sc-csTbTw bBwtzC">Download</a></p><div class="sc-iJCSeZ sc-cBornZ gJcGEt nfpVm"></div><div data-role="redoc-summary" html="" class="sc-iJCSeZ sc-cBornZ gJcGEt nfpVm"></div><div data-role="redoc-description" html="" class="sc-iJCSeZ sc-cBornZ gJcGEt nfpVm"></div></div></div></div></div><div class="sc-jtiYlx jdTgwv"></div></div></div>
+      <script>
+      const __redoc_state = {"menu":{"activeItemIdx":-1},"spec":{"data":{"openapi":"3.0.0","info":{"title":"google/type/datetime.proto","version":"version not set"},"paths":{},"components":{"schemas":{"protobufAny":{"type":"object","properties":{"@type":{"type":"string"}},"additionalProperties":{}},"rpcStatus":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"message":{"type":"string"},"details":{"type":"array","items":{"$ref":"#/components/schemas/protobufAny"}}}},"typeDateTime":{"type":"object","properties":{"year":{"type":"integer","format":"int32","description":"Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a\ndatetime without a year."},"month":{"type":"integer","format":"int32","description":"Required. Month of year. Must be from 1 to 12."},"day":{"type":"integer","format":"int32","description":"Required. Day of month. Must be from 1 to 31 and valid for the year and\nmonth."},"hours":{"type":"integer","format":"int32","description":"Required. Hours of day in 24 hour format. Should be from 0 to 23. An API\nmay choose to allow the value \"24:00:00\" for scenarios like business\nclosing time."},"minutes":{"type":"integer","format":"int32","description":"Required. Minutes of hour of day. Must be from 0 to 59."},"seconds":{"type":"integer","format":"int32","description":"Required. Seconds of minutes of the time. Must normally be from 0 to 59. An\nAPI may allow the value 60 if it allows leap-seconds."},"nanos":{"type":"integer","format":"int32","description":"Required. Fractions of seconds in nanoseconds. Must be from 0 to\n999,999,999."},"utcOffset":{"type":"string","description":"UTC offset. Must be whole seconds, between -18 hours and +18 hours.\nFor example, a UTC offset of -4:00 would be represented as\n{ seconds: -14400 }."},"timeZone":{"$ref":"#/components/schemas/typeTimeZone"}},"description":"Represents civil time (or occasionally physical time).\n\nThis type can represent a civil time in one of a few possible ways:\n\n * When utc_offset is set and time_zone is unset: a civil time on a calendar\n   day with a particular offset from UTC.\n * When time_zone is set and utc_offset is unset: a civil time on a calendar\n   day in a particular time zone.\n * When neither time_zone nor utc_offset is set: a civil time on a calendar\n   day in local time.\n\nThe date is relative to the Proleptic Gregorian Calendar.\n\nIf year is 0, the DateTime is considered not to have a specific year. month\nand day must have valid, non-zero values.\n\nThis type may also be used to represent a physical time if all the date and\ntime fields are set and either case of the `time_offset` oneof is set.\nConsider using `Timestamp` message for physical time instead. If your use\ncase also would like to store the user's timezone, that can be done in\nanother field.\n\nThis type is more flexible than some applications may want. Make sure to\ndocument and validate your application's limitations."},"typeTimeZone":{"type":"object","properties":{"id":{"type":"string","description":"IANA Time Zone Database time zone, e.g. \"America/New_York\"."},"version":{"type":"string","description":"Optional. IANA Time Zone Database version number, e.g. \"2019a\"."}},"description":"Represents a time zone from the\n[IANA Time Zone Database](https://www.iana.org/time-zones)."},"v1DeletePetResponse":{"type":"object"},"v1GetPetResponse":{"type":"object","properties":{"pet":{"$ref":"#/components/schemas/v1Pet"}}},"v1Pet":{"type":"object","properties":{"petType":{"$ref":"#/components/schemas/v1PetType"},"petId":{"type":"string"},"name":{"type":"string"},"createdAt":{"$ref":"#/components/schemas/typeDateTime"}},"description":"Pet represents a pet in the pet store."},"v1PetType":{"type":"integer","format":"int32","enum":[0,1,2,3,4],"default":0,"description":"PetType represents the different types of pets in the pet store."},"v1PutPetResponse":{"type":"object","properties":{"pet":{"$ref":"#/components/schemas/v1Pet"}}}}}}},"searchIndex":{"store":[],"index":{"version":"2.3.9","fields":["title","description"],"fieldVectors":[],"invertedIndex":[],"pipeline":[]}},"options":{}};
+
+      var container = document.getElementById('redoc');
+      Redoc.hydrate(__redoc_state, container);
+
+      </script>
+</body>
+
+</html>

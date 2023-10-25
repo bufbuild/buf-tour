@@ -1,0 +1,9 @@
+{
+  "name": "getting-started-with-buf-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "redoc": "^2.1.3"
+  }
+}

@@ -22,3 +22,8 @@ plugins:
     opt: paths=source_relative
   - plugin: buf.build/grpc-ecosystem/openapiv2:v2.18.0
     out: ../docs/openapiv2
+    opt:
+      - logtostderr=true
+      - allow_merge=true
+      - enums_as_ints=true
+      - disable_service_tags=true

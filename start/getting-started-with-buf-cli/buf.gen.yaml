@@ -4,9 +4,15 @@ managed:
   go_package_prefix:
     default: Go_T_buffTutorial/gen
 plugins:
+  - plugin: buf.build/grpc/go:v1.3.0
+    out: gen
+    opt:
+      - paths=source_relative
+  # dependencies
   - plugin: buf.build/protocolbuffers/go
     out: gen
-    opt: paths=source_relative
+    opt:
+      - paths=source_relative
   - plugin: buf.build/connectrpc/go
     out: gen
     opt: paths=source_relative

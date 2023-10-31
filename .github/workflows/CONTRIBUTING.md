@@ -11,7 +11,7 @@ Add the new module to the [buf workflow](../workflows/buf.yaml), similarly to ho
 ```
       # Push the tutorial-foo module
       - uses: bufbuild/buf-push-action@v1
-        input: tutorial-foo/proto
         with:
+          input: tutorial-foo/proto
           buf_token: ${{ secrets.BUF_TOKEN }}
 ```

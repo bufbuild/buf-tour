@@ -1,0 +1,15 @@
+name: buf
+on:
+  push:
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bufbuild/buf-setup-action@v1
+      # Push the tutorial-breaking module
+      - uses: bufbuild/buf-push-action@v1
+        input: tutorial-breaking/proto
+        with:
+          buf_token: ${{ secrets.BUF_TOKEN }}

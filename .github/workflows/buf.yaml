@@ -11,5 +11,5 @@ jobs:
       # Push the tutorial-breaking module
       - uses: bufbuild/buf-push-action@v1
         with:
-          input: tutorial-breaking/proto
+          input: start/tutorial-breaking/proto
           buf_token: ${{ secrets.BUF_TOKEN }}

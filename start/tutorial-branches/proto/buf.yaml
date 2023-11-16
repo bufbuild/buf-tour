@@ -1,0 +1,8 @@
+version: v1
+name: buf.build/tutorials/branches
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT

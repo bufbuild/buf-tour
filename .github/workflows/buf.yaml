@@ -13,3 +13,10 @@ jobs:
         with:
           input: start/tutorial-breaking/proto
           buf_token: ${{ secrets.BUF_TOKEN }}
+      # Push the tutorial-branches module
+      - uses: bufbuild/buf-push-action@v1
+        with:
+          input: start/tutorial-branches/proto
+          buf_token: ${{ secrets.BUF_TOKEN }}
+          create_visibility: public
+          draft: ${{ github.ref_name != 'main'}}

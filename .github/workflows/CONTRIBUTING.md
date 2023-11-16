@@ -13,7 +13,12 @@ Ensure that the module you plan on syncing has been created in the BSR. For exam
 
 Add the new module to the [buf workflow](../workflows/buf.yaml), similarly to how the tutorial-breaking module is configured there. For example, if you were adding a `tutorial-foo` module with its protobuf files defined in a `proto` subdirectory, you'd add the following clause to the workflow:
 ```
-      # Push the tutorial-foo module
+  foo-module:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bufbuild/buf-setup-action@v1
       - uses: bufbuild/buf-push-action@v1
         with:
           input: start/tutorial-foo/proto

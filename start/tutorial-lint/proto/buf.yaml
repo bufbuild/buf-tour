@@ -1,5 +1,5 @@
 version: v1
-name: buf.build/tutorials-lint
+name: buf.build/tutorials/lint
 breaking:
   use:
     - FILE

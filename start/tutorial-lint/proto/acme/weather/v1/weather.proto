@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package weather;
+
+enum Condition {
+  sunny = 0;
+  CONDITION_RAINY = 1;
+}
+
+message Location {
+  float latitude = 1;
+  float longitude = 2;
+}
+
+message Weather {
+  float temperature = 1;
+  Condition conditions = 2;
+}
+
+message GetWeather {
+  Location location = 1;
+}
+
+service WeatherVision {
+  rpc CurrentWeather (GetWeather) returns (Weather);
+}

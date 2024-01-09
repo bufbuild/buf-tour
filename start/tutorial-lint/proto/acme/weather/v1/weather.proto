@@ -3,8 +3,9 @@ syntax = "proto3";
 package weather;
 
 enum Condition {
-  sunny = 0;
-  CONDITION_RAINY = 1;
+  CONDITION_DEFAULT = 0;
+  CONDITION_SUNNY = 1;
+  rainy = 2;
 }
 
 message Location {

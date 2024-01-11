@@ -3,9 +3,8 @@ syntax = "proto3";
 package weather;
 
 enum Condition {
-  CONDITION_DEFAULT = 0;
-  CONDITION_SUNNY = 1;
-  rainy = 2;
+  SUNNY = 0;
+  RAINY = 1;
 }
 
 message Location {
@@ -13,15 +12,11 @@ message Location {
   float longitude = 2;
 }
 
-message Weather {
+message GetWeatherResponse {
   float temperature = 1;
   Condition conditions = 2;
 }
 
-message GetWeather {
-  Location location = 1;
-}
-
-service WeatherVision {
-  rpc CurrentWeather (GetWeather) returns (Weather);
+service WeatherService {
+  rpc GetWeather (Location) returns (GetWeatherResponse);
 }

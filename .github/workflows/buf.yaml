@@ -23,3 +23,13 @@ jobs:
           buf_token: ${{ secrets.BUF_TOKEN }}
           create_visibility: public
           draft: ${{ github.ref_name != 'main'}}
+  lint-module:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: bufbuild/buf-setup-action@v1
+      - uses: bufbuild/buf-push-action@v1
+        with:
+          input: finish/tutorial-lint/proto
+          buf_token: ${{ secrets.BUF_TOKEN }}

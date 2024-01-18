@@ -8,20 +8,16 @@ enum Condition {
   CONDITION_RAINY = 2;
 }
 
-message Location {
+message GetWeatherRequest {
   float latitude = 1;
   float longitude = 2;
 }
 
-message CurrentWeatherRequest {
-  Location location = 1;
-}
-
-message CurrentWeatherResponse {
+message GetWeatherResponse {
   float temperature = 1;
   Condition conditions = 2;
 }
 
-service WeatherVisionService {
-  rpc CurrentWeather (CurrentWeatherRequest) returns (CurrentWeatherResponse);
+service WeatherService {
+  rpc GetWeather (GetWeatherRequest) returns (GetWeatherResponse);
 }

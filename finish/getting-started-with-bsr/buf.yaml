@@ -1,7 +1,7 @@
 version: v2
 modules:
   - path: proto
-    name: buf.build/cgunby/petapis
+    name: buf.build/<username>/petapis
 lint:
   use:
     - DEFAULT

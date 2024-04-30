@@ -16,7 +16,7 @@ enum PetType {
 // Pet represents a pet in the pet store.
 message Pet {
   PetType pet_type = 1;
-  string petID = 2;
+  string pet_id = 2;
   string name = 3;
   google.type.DateTime created_at = 4;
 }
@@ -39,7 +39,7 @@ message PutPetResponse {
 }
 
 message DeletePetRequest {
-  string pet_id = 1;
+  string petID = 1;
 }
 
 message DeletePetResponse {}

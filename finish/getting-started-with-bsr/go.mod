@@ -1,14 +1,14 @@
 module github.com/bufbuild/buf-tour
 
-go 1.19
+go 1.22.2
 
 require (
-	buf.build/gen/go/<USER>/petapis/bufbuild/connect-go v1.5.1-20230210174710-1256c735ed27.1
-	buf.build/gen/go/<USER>/petapis/protocolbuffers/go v1.28.1-20230210174710-1256c735ed27.4
-	github.com/bufbuild/connect-go v1.5.1
-	golang.org/x/net v0.6.0
-	google.golang.org/genproto v0.0.0-20230209215440-0dfe4f8abfcc
-	google.golang.org/protobuf v1.28.1
+	buf.build/gen/go/<USERNAME>/petapis/connectrpc/go v1.16.1-20240424002215-e3c35074dc9a.1
+	buf.build/gen/go/<USERNAME>/petapis/protocolbuffers/go v1.33.0-20240424002215-e3c35074dc9a.1
+	connectrpc.com/connect v1.16.1
+	golang.org/x/net v0.24.0
+	google.golang.org/genproto v0.0.0-20240429193739-8cf5692501f6
+	google.golang.org/protobuf v1.33.0
 )
 
-require golang.org/x/text v0.7.0 // indirect
+require golang.org/x/text v0.14.0 // indirect

@@ -1,0 +1,12 @@
+version: v2
+modules:
+  - path: proto
+    name: buf.build/<username>/petapis
+lint:
+  use:
+    - DEFAULT
+breaking:
+  use:
+    - FILE
+deps:
+  - buf.build/googleapis/googleapis

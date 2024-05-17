@@ -5,9 +5,10 @@ import (
 	"log"
 	"net/http"
 
-	"buf.build/gen/go/<USER>/petapis/bufbuild/connect-go/pet/v1/petv1connect"
-	petv1 "buf.build/gen/go/<USER>/petapis/protocolbuffers/go/pet/v1"
-	"github.com/bufbuild/connect-go"
+	// Replace <USERNAME> with your BSR username if username isn't present
+	"buf.build/gen/go/:username/petapis/connectrpc/go/pet/v1/petv1connect"
+	petv1 "buf.build/gen/go/:username/petapis/protocolbuffers/go/pet/v1"
+	connect "connectrpc.com/connect"
 )
 
 func main() {
@@ -15,7 +16,7 @@ func main() {
 		http.DefaultClient,
 		"http://localhost:8080",
 	)
-	_, err := client.PutPet(
+	res, err := client.PutPet(
 		context.Background(),
 		connect.NewRequest(&petv1.PutPetRequest{
 			PetType: petv1.PetType_PET_TYPE_SNAKE,
@@ -26,5 +27,5 @@ func main() {
 		log.Println(err)
 		return
 	}
-	log.Println("Successfully PutPet")
+	log.Println(res.Msg, "Successfully PutPet")
 }

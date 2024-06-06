@@ -1,35 +1,33 @@
 name: buf
 on:
   push:
+  delete:
+permissions:
+  contents: read
 jobs:
   breaking-module:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v3
-      - uses: bufbuild/buf-setup-action@v1.32.0-beta.1
-      - uses: bufbuild/buf-push-action@v1
+      - uses: actions/checkout@v4
+      - uses: bufbuild/buf-action@v0.1
         with:
           input: start/tutorial-breaking/proto
-          buf_token: ${{ secrets.BUF_TOKEN }}
+          token: ${{ secrets.BUF_TOKEN }}
   branches-module:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: bufbuild/buf-setup-action@v1.32.0-beta.1
-      - uses: bufbuild/buf-push-action@v1
+      - uses: actions/checkout@v4
+      - uses: bufbuild/buf-action@v0.1
         with:
           input: start/tutorial-branches/proto
-          buf_token: ${{ secrets.BUF_TOKEN }}
-          create_visibility: public
-          draft: ${{ github.ref_name != 'main'}}
+          token: ${{ secrets.BUF_TOKEN }}
   lint-module:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/checkout@v3
-      - uses: bufbuild/buf-setup-action@v1.32.0-beta.1
-      - uses: bufbuild/buf-push-action@v1
+      - uses: actions/checkout@v4
+      - uses: bufbuild/buf-action@v0.1
         with:
           input: finish/tutorial-lint/proto
-          buf_token: ${{ secrets.BUF_TOKEN }}
+          token: ${{ secrets.BUF_TOKEN }}

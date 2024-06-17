@@ -8,7 +8,7 @@ import (
 
 	petv1 "github.com/bufbuild/buf-tour/gen/pet/v1"
 	"github.com/bufbuild/buf-tour/gen/pet/v1/petv1connect"
-	"github.com/bufbuild/connect-go"
+	connect "connectrpc.com/connect"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"
 )

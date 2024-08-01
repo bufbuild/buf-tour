@@ -10,7 +10,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
-      - uses: bufbuild/buf-action@v0.1
+      - uses: bufbuild/buf-action@v1
         with:
           input: start/tutorial-breaking/proto
           token: ${{ secrets.BUF_TOKEN }}
@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: bufbuild/buf-action@v0.1
+      - uses: bufbuild/buf-action@v1
         with:
           input: start/tutorial-branches/proto
           token: ${{ secrets.BUF_TOKEN }}
@@ -27,7 +27,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v4
-      - uses: bufbuild/buf-action@v0.1
+      - uses: bufbuild/buf-action@v1
         with:
           input: finish/tutorial-lint/proto
           token: ${{ secrets.BUF_TOKEN }}

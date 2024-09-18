@@ -4,7 +4,7 @@ modules:
     name: buf.build/tutorials/create-buf-plugin
 lint:
   use:
-    - DEFAULT
+    - STANDARD
     - RPC_SUFFIX
 breaking:
   use:

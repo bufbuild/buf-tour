@@ -5,6 +5,13 @@ modules:
 lint:
   use:
     - DEFAULT
+    - RPC_SUFFIX
 breaking:
   use:
     - FILE
+plugins:
+   - plugin: rpc-suffix
+     options:
+       forbidden_rpc_suffixes:
+         - Method
+         - RPC

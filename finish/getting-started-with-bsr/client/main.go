@@ -6,8 +6,8 @@ import (
 	"net/http"
 
 	// Replace <USERNAME> with your BSR username if username isn't present
-	"buf.build/gen/go/:username/petapis/connectrpc/go/pet/v1/petv1connect"
-	petv1 "buf.build/gen/go/:username/petapis/protocolbuffers/go/pet/v1"
+	"buf.build/gen/go/xUSERNAMEx/petapis/connectrpc/go/pet/v1/petv1connect"
+	petv1 "buf.build/gen/go/xUSERNAMEx/petapis/protocolbuffers/go/pet/v1"
 	connect "connectrpc.com/connect"
 )
 
